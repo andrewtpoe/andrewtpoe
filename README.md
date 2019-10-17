@@ -1,0 +1,64 @@
+# Andrew T. Poe
+
+Page Sections:
+
+- About
+- Experience
+- Projects
+  - stuff in resume...
+  - ...coming soon
+    - number recognition app (takes user drawn input, predicts number)
+    - Tic Tac Toe w/ AI
+- Skills
+  - HTML
+    - HTML 5
+    - JSX
+    - HAML
+  - CSS
+    - CSS 3
+    - Styled Components
+    - Sass
+  - JavaScript
+    - JavaScript
+    - React
+    - Redux
+    - Apollo
+    - Styled Components
+    - Ramda
+    - Lodash
+  - Server
+    - Node
+    - DynamoDB
+    - GraphQL
+    - AWS
+    - Ruby
+    - Rails
+    - Postgres
+    - Heroku
+  - Build Tools
+    - Gatsby
+    - Webpack
+    - Rollup
+  - Other
+    - Git
+    - GitHub
+    - GitLab
+    - VSCode
+    - Figma
+- Education
+  - Self
+  - The Iron Yard
+- Resume (link to google doc)
+- Follow Me
+  - github
+  - linkedin
+  - medium
+  - twitter
+- Hire Me
+  - Services
+    - Consultation on React application architecture/ best practices
+    - Consultation on React component architecture/ best practices
+    - Feature addition
+    - Test coverage
+    - Major package version upgrades
+  - Contact
