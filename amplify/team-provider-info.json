@@ -1,0 +1,14 @@
+{
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "andrewtpoe-production-20191018133751-authRole",
+            "UnauthRoleArn": "arn:aws:iam::042562548373:role/andrewtpoe-production-20191018133751-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::042562548373:role/andrewtpoe-production-20191018133751-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "andrewtpoe-production-20191018133751-deployment",
+            "UnauthRoleName": "andrewtpoe-production-20191018133751-unauthRole",
+            "StackName": "andrewtpoe-production-20191018133751",
+            "StackId": "arn:aws:cloudformation:us-east-1:042562548373:stack/andrewtpoe-production-20191018133751/02ab2b80-f1ce-11e9-a1fa-0e660dd6b3d4"
+        }
+    }
+}
