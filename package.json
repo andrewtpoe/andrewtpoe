@@ -5,7 +5,9 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
+    "deploy": "gh-pages -d public -b master",
     "format": "prettier --write './**/*.{js,json,css,md}'",
+    "predeploy": "npm run build",
     "start": "npm run clean && npm run build && gatsby serve",
     "start:dev": "npm run clean && gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,6 +29,7 @@
     "gatsby-plugin-styled-components": "^3.1.11",
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-transformer-remark": "^2.6.30",
+    "gh-pages": "^2.1.1",
     "polished": "^3.4.1",
     "ramda": "^0.26.0",
     "react": "^16.10.2",
