@@ -35,7 +35,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.0",
-    "styled-components": "^4.4.0",
+    "styled-components": "^4.4.1",
     "styled-components-modifiers": "^1.2.5"
   },
   "devDependencies": {
