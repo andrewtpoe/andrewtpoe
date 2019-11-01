@@ -19,32 +19,33 @@ const Container = styled.div`
 function Footer() {
   return (
     <Container>
-      <A href="https://github.com/andrewtpoe">
-        <FontAwesomeIcon icon={faGithubSquare} size="4x" aria-label="GitHub" />
+      <A
+        href="https://github.com/andrewtpoe"
+        aria-label="Visit my GitHub profile"
+      >
+        <FontAwesomeIcon icon={faGithubSquare} size="4x" />
       </A>
-      <A href="https://www.linkedin.com/in/andrewtpoe/">
-        <FontAwesomeIcon icon={faLinkedin} size="4x" aria-label="LinkedIn" />
+      <A
+        href="https://www.linkedin.com/in/andrewtpoe/"
+        aria-label="Visit my LinkedIn profile"
+      >
+        <FontAwesomeIcon icon={faLinkedin} size="4x" />
       </A>
-      <A href="https://twitter.com/andrewtpoe">
-        <FontAwesomeIcon
-          icon={faTwitterSquare}
-          size="4x"
-          aria-label="Twitter"
-        />
+      <A href="https://twitter.com/andrewtpoe" aria-label="Visit my Twitter">
+        <FontAwesomeIcon icon={faTwitterSquare} size="4x" />
       </A>
-      <A href="mailto:andrewtpoe@gmail.com?Subject=Hello%20Andrew">
-        <FontAwesomeIcon
-          icon={faEnvelopeSquare}
-          size="4x"
-          aria-label="Send me an email"
-        />
+      <A
+        href="mailto:andrewtpoe@gmail.com?Subject=Hello%20Andrew"
+        aria-label="Send me an email"
+      >
+        <FontAwesomeIcon icon={faEnvelopeSquare} size="4x" />
       </A>
-      <A href="/files/resume.pdf" download="andrew-t-poe-resume">
-        <FontAwesomeIcon
-          icon={faFileDownload}
-          size="4x"
-          aria-label="Download my resume"
-        />
+      <A
+        href="/files/resume.pdf"
+        download="andrew-t-poe-resume"
+        aria-label="Download my resume"
+      >
+        <FontAwesomeIcon icon={faFileDownload} size="4x" />
       </A>
     </Container>
   );
