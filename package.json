@@ -23,7 +23,7 @@
     "babel-plugin-styled-components": "^1.7.1",
     "gatsby": "^2.17.11",
     "gatsby-plugin-manifest": "^2.2.27",
-    "gatsby-plugin-mdx": "^1.0.55",
+    "gatsby-plugin-mdx": "^1.0.56",
     "gatsby-plugin-styled-components": "^3.1.12",
     "gatsby-plugin-offline": "^3.0.19",
     "gatsby-plugin-react-helmet": "^3.1.14",
