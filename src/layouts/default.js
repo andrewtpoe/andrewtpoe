@@ -1,4 +1,3 @@
-import Amplify from 'aws-amplify';
 import { StaticQuery, graphql } from 'gatsby';
 import { normalize } from 'polished';
 import PropTypes from 'prop-types';
@@ -18,10 +17,6 @@ import P from '../components/p';
 
 import Footer from '../compositions/footer';
 import Header from '../compositions/header';
-
-import awsConfig from '../aws-exports';
-
-Amplify.configure(awsConfig);
 
 const SPACE_UNIT = 8;
 
