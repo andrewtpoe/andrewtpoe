@@ -1,20 +1,17 @@
 {
-    "appName": "andrewtpoe",
-    "roleName": "pinpointLambdaRolef0f4155f",
-    "cloudWatchPolicyName": "cloudWatchPolicyf0f4155f",
-    "pinpointPolicyName": "pinpointPolicyf0f4155f",
-    "authPolicyName": "pinpoint_amplify_f0f4155f",
-    "unauthPolicyName": "pinpoint_amplify_f0f4155f",
-    "authRoleName": {
-        "Ref": "AuthRoleName"
-    },
-    "unauthRoleName": {
-        "Ref": "UnauthRoleName"
-    },
-    "authRoleArn": {
-        "Fn::GetAtt": [
-            "AuthRole",
-            "Arn"
-        ]
-    }
+  "appName": "andrewtpoe",
+  "roleName": "pinpointLambdaRolef0f4155f",
+  "cloudWatchPolicyName": "cloudWatchPolicyf0f4155f",
+  "pinpointPolicyName": "pinpointPolicyf0f4155f",
+  "authPolicyName": "pinpoint_amplify_f0f4155f",
+  "unauthPolicyName": "pinpoint_amplify_f0f4155f",
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "authRoleArn": {
+    "Fn::GetAtt": ["AuthRole", "Arn"]
+  }
 }
