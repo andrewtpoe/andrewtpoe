@@ -29,7 +29,7 @@
     "gatsby-plugin-sitemap": "^2.2.20",
     "gatsby-plugin-styled-components": "^3.1.12",
     "gatsby-source-filesystem": "^2.1.36",
-    "gatsby-transformer-remark": "^2.6.33",
+    "gatsby-transformer-remark": "^2.6.36",
     "gh-pages": "^2.1.1",
     "polished": "^3.4.2",
     "ramda": "^0.26.0",
