@@ -6,23 +6,6 @@ I build delightful, accessible user experiences, typically with React JS.
 
 ---
 
-My journey as a software developer started with a love of making useful tools
-with technology. I first learned to code by experimenting with
-[Arduinos](https://www.arduino.cc/) as a hobby, then teaching myself the basics
-of computer programming with Python.
-
-As I became a better developer, I created a program in Python that helped locate
-profitable products to sell on Amazon. Eventually I started a business (POE
-Innovations) with that program. It worked well, but I quickly realized I loved
-writing code much more than I did shipping products.
-
-I was fortunate enough to go through The Iron Yard's Rails Engineering course
-where I learned the fundamentals of building web applications with Ruby On Rails
-in 2015 . Since that bootcamp, I have launched a web application of my own, been
-continuously employed as a software engineer for a few truly wonderful
-companies, and had the pleasure of working with a variety of modern (and older)
-web technologies.
-
 Of all the tools I have been fortunate enough to use, modern JavaScript is my
 personal favorite. React JS follows as a close second. For me, these tools get
 out of my way and allow me to build beautiful web applications that solve
@@ -90,9 +73,10 @@ _BEM-flavored conventions in your Styled Components._
 [Styled Components](https://www.styled-components.com/) is a superb CSS-in-JS
 tool. [BEM](http://getbem.com/) is a wonderful CSS convention.
 `styled-components-modifiers` allows you to combine the best of both worlds.
-This is a library I developed for Decisiv that was then open sourced. All of
-Decisiv's React JS based projects use this tool extensively. When I last looked
-it had over 115,000 downloads on NPM.
+This is a library I developed to simplify our styling at Decisiv that was then
+open sourced. All of Decisiv's React JS based projects use this tool extensively
+and feedback has been very positive. When I last looked it had over 145,000
+downloads on NPM.
 
 ### [Key Design System](https://key-design-system.decisiv.com)
 
@@ -103,6 +87,30 @@ design system was a concerted effort to create a standard toolkit for building
 new applications and updating older applications. This project is not true "open
 source" as it is managed according to requirements set by the company, but it is
 freely available for use by anyone.
+
+### [Request Answers](https://andrewtpoe.github.io/request-answers/)
+
+_A demo app for a unique approach to handling API requests with Redux._
+
+While at Decisiv, my team encountered significant issues with making, tracking,
+and handling responses from API requests. We attempted several patterns over
+different projects including our own initial best efforts, the "officially
+documented" approach, and `redux-saga`. All of these approaches resulted in
+inconsistent implementations, a high level of code complexity, and tons of
+boilerplate code.
+
+I developed an internal package called `redux-flight-control` that handled
+deduplication, managing requests through their lifecycles, and handling
+responses when the request was resolved (or errored). This package ended up
+saving well over 100 lines of repetitive boilerplate code for _every_ API
+request in our app which both reduced code bloat and improved development time
+for new features. Additionally, implementing good error handling and loading
+states was drastically simplified.
+
+The package I developed is internal, but the public git repository for the demo
+app linked above includes a generalized implementation and documents the core
+technique. The technique is very similar to the approach recently adopted by
+[redux-toolkit](https://redux-toolkit.js.org/) for async actions.
 
 <!-- ### Digit <COMING SOON>
 
