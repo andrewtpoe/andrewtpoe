@@ -5,9 +5,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "deploy": "gh-pages -d public -b master",
     "format": "prettier --write './**/*.{js,json,css,md}'",
-    "predeploy": "npm run build",
     "start": "npm run clean && npm run build && gatsby serve",
     "start:dev": "npm run clean && gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +17,6 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "aws-amplify": "^1.2.4",
     "babel-plugin-styled-components": "^1.7.1",
     "gatsby": "^2.17.11",
     "gatsby-plugin-manifest": "^2.2.27",
