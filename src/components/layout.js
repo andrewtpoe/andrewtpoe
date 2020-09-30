@@ -1,12 +1,24 @@
-import 'tailwindcss/dist/base.min.css';
-
 import React from 'react';
+import { createGlobalStyle } from 'styled-components';
+import tw, { GlobalStyles } from 'twin.macro';
 
-function Layout({ children, title }) {
+import Header from './header';
+import SEO from './seo'
+
+const CustomGlobalStyle = createGlobalStyle`
+  body {
+    ${tw`text-gray-700`}
+  }
+`;
+
+function Layout({ children }) {
   return (
     <>
-      <header>{title}</header>
-      <main>{children}</main>
+      <CustomGlobalStyle />
+      <GlobalStyles />
+      <SEO />
+      <Header />
+      <main css={tw`max-w-screen-md mx-auto p-2`}>{children}</main>
     </>
   );
 }

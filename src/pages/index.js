@@ -23,7 +23,6 @@ function IndexPage({ data }) {
   return (
     <Layout>
       <p>This is text. Yay!</p>
-      <p>{title}</p>
     </Layout>
   );
 }

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.andrewtpoe.com`,
-    title: 'Andrew T. Poe',
+    title: 'Andrew T. Poe | Sr. Software Engineer',
     author: 'Andrew T. Poe',
     description: 'Personal website of Andrew T. Poe',
   },
