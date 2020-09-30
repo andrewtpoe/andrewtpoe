@@ -4,10 +4,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPostPageTemplate = path.resolve(
-    `./src/page-templates/blog-post.js`,
-  );
-
   return graphql(
     `
       {
@@ -21,8 +17,12 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
               }
               frontmatter {
+                author
+                date
+                description
                 title
               }
+              id
             }
           }
         }
@@ -33,9 +33,9 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
 
-    // Create blog posts pages.
     const posts = result.data.allMdx.edges;
 
+    // Create blog posts pages.
     posts.forEach((post, index) => {
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
@@ -43,17 +43,87 @@ exports.createPages = ({ graphql, actions }) => {
 
       createPage({
         path: `blog${post.node.fields.slug}`,
-        component: blogPostPageTemplate,
+        component: path.resolve(`./src/page-templates/blog-post.js`),
         context: {
-          slug: post.node.fields.slug,
-          previous,
+          id: post.node.id,
           next,
+          previous,
+          slug: post.node.fields.slug,
+        },
+      });
+    });
+
+    // Create blog post index pages.
+    const postsPerIndexPage = 6;
+    const numPages = Math.ceil(posts.length / postsPerIndexPage);
+    createPage({
+      path: '/',
+      component: path.resolve('./src/page-templates/blog-post-list.js'),
+      context: {
+        currentPage: 1,
+        limit: postsPerIndexPage,
+        numPages,
+        skip: 0,
+      },
+    });
+    Array.from({ length: numPages }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/blog` : `/blog/${index + 1}`,
+        component: path.resolve(`./src/page-templates/blog-post-list.js`),
+        context: {
+          currentPage: index + 1,
+          limit: postsPerIndexPage,
+          numPages,
+          skip: index * postsPerIndexPage,
         },
       });
     });
 
     return null;
   });
+};
+
+exports.createSchemaCustomization = ({
+  actions: { createTypes, createFieldExtension },
+  createContentDigest,
+}) => {
+  createFieldExtension({
+    name: 'mdx',
+    extend() {
+      return {
+        type: 'String',
+        resolve(source, args, context, info) {
+          // Grab field
+          const value = source[info.fieldName];
+          // Isolate MDX
+          const mdxType = info.schema.getType('Mdx');
+          // Grab just the body contents of what MDX generates
+          const { resolve } = mdxType.getFields().body;
+          return resolve(
+            {
+              rawBody: value,
+              internal: {
+                contentDigest: createContentDigest(value), // Used for caching
+              },
+            },
+            args,
+            context,
+            info,
+          );
+        },
+      };
+    },
+  });
+
+  createTypes(`
+    type MdxFrontmatter {
+      description: String @mdx
+    }
+
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter
+    }
+  `);
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

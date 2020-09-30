@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.andrewtpoe.com`,
-    title: 'Andrew T. Poe | Sr. Software Engineer',
     author: 'Andrew T. Poe',
-    description: 'Personal website of Andrew T. Poe',
+    description: 'Personal website for Andrew T. Poe',
+    image: '/images/andrewtpoe.jpg',
+    defaultTitle: 'Andrew T. Poe',
+    titleTemplate: '%s | Andrew T. Poe',
+    twitterUsername: '@andrewtpoe',
+    url: `https://www.andrewtpoe.com`,
   },
   plugins: [
     { resolve: `gatsby-plugin-styled-components`, options: { pure: true } },

@@ -1,24 +1,19 @@
 import { Link } from 'gatsby';
 import React from 'react';
-
-import tw, { css } from 'twin.macro';
+import tw from 'twin.macro';
 
 function NavLink(props) {
-  const [current, setCurrent] = React.useState(false);
-  const isLinkCurrent = ({ isCurrent }) => {
-    if (isCurrent !== current) {
-      setCurrent(isCurrent);
-    }
-  };
-
   return (
     <Link
       {...props}
-      css={css`
-        ${tw`p-1 hover:text-red-700`}
-        ${current && tw`border-b-2 border-gray-700 hover:text-gray-700`}
-      `}
-      getProps={isLinkCurrent}
+      css={tw`p-1 hover:text-red-800`}
+      getProps={({ isCurrent }) => {
+        if (isCurrent) {
+          return {
+            style: tw`border-b-2 border-gray-800 hover:text-gray-800`,
+          };
+        }
+      }}
     />
   );
 }
@@ -30,7 +25,7 @@ function SiteNav() {
         <NavLink to="/about">About</NavLink>
       </li>
       <li>
-        <NavLink to="/">Follow Me</NavLink>
+        <NavLink to="/follow">Follow</NavLink>
       </li>
     </ul>
   );
@@ -41,7 +36,15 @@ function Header() {
     <header css={tw`h-32 flex justify-between items-center`}>
       <div css={tw`px-8`}>
         <Link
-          css={tw`font-thin text-4xl border-b-2 border-red-700 py-1 tracking-wide`}
+          css={tw`
+            border-b-2
+            border-red-800
+            font-thin
+            py-1
+            text-4xl
+            tracking-wide
+            hover:text-red-800
+          `}
           to="/"
         >
           andrew t. poe

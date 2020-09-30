@@ -1,0 +1,22 @@
+---
+title: About
+description: A little bit about me.
+---
+
+import Layout from '../components/layout';
+
+export default (props) => {
+  return (
+    <Layout
+      {...props}
+      getSEOProps={() => ({
+        title: 'About',
+        description: 'A little bit about me.',
+      })}
+    />
+  );
+};
+
+# About Me
+
+I'm pretty cool and all, but you should see my wife and kid (soon to be kids).

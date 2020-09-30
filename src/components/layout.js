@@ -1,26 +1,35 @@
+import noop from 'lodash/noop';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import tw, { GlobalStyles } from 'twin.macro';
 
+import MDXProvider from './MDXProvider';
 import Header from './header';
-import SEO from './seo'
+import SEO from './seo';
 
 const CustomGlobalStyle = createGlobalStyle`
   body {
-    ${tw`text-gray-700`}
+    ${tw`font-light text-gray-800`}
   }
 `;
 
-function Layout({ children }) {
+function Layout({ children, getSEOProps = noop }) {
   return (
     <>
       <CustomGlobalStyle />
       <GlobalStyles />
-      <SEO />
+      <SEO {...getSEOProps()} />
       <Header />
-      <main css={tw`max-w-screen-md mx-auto p-2`}>{children}</main>
+      <main css={tw`max-w-screen-md mx-auto p-2`}>
+        <MDXProvider>{children}</MDXProvider>
+      </main>
     </>
   );
 }
+
+Layout.propTypes = {
+  getSEOProps: PropTypes.func,
+};
 
 export default Layout;
