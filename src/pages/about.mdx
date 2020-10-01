@@ -1,6 +1,8 @@
 ---
 title: About
-description: A little bit about me.
+description:
+  Christian, husband, father & software engineer. Enjoys working with Node and
+  GraphQL. Loves React. Learn more about me, Andrew T. Poe.
 ---
 
 import Layout from '../components/layout';
@@ -11,7 +13,8 @@ export default (props) => {
       {...props}
       getSEOProps={() => ({
         title: 'About',
-        description: 'A little bit about me.',
+        description:
+          'Christian, husband, father & software engineer. Enjoys working with Node and GraphQL. Loves React. Learn more about me, Andrew T. Poe.',
       })}
     />
   );
@@ -19,4 +22,117 @@ export default (props) => {
 
 # About Me
 
-I'm pretty cool and all, but you should see my wife and kid (soon to be kids).
+![](/images/andrewtpoe.jpg)
+
+I am a **software engineer**. I solve complex problems, usually with code. I
+build delightful, accessible user experiences for the web.
+
+Of all the tools I have been fortunate enough to use professionally, modern
+JavaScript is my personal favorite. React JS follows as a close second. For me,
+these tools get out of my way and allow me to build beautiful web applications
+that solve complex problems for their users.
+
+My passion is programming. Even when I'm not at work you can frequently find me
+on a computer learning new techniques and building personal projects. Code isn't
+everything to me though. I also thoroughly enjoy spending time with my family,
+organic gardening, and cooking delicious food.
+
+---
+
+## Experience
+
+### Decisiv Inc, Glen Allen VA (Remote)
+
+_Software Engineer May 2016 - PRESENT_
+
+I was initially tasked with full-stack development tasts on a monolithic Ruby on
+Rails/ Angular JS application. This included adding new features, integrations,
+and resolving issues as they arose.
+
+In the spring of 2017, I transitioned to a newly formed UI development team
+where I have helped build numerous complex applications in React JS. The
+applications used both REST and Graphql APIs, and included several product
+offerings, an internal style guide, a design system, and numerous internal and
+open-sourced JavaScript (and TypeScript) packages. This work included both
+team-based and squad-based (cross-team) projects, several of which I have led
+the UI development for.
+
+### BREWPUBLIK, Charlotte NC (Remote)
+
+_Software Engineer January 2016 - April 2016_
+
+I developed an administrative application for internal business users in React
+JS that allowed easy access to customer data and reporting tools.
+
+### POE Innovations LLC, Charleston SC
+
+_CEO, Software Engineer June 2014 - April 2016_
+
+This was a technology company that I founded with two primary objectives: learn
+about building a business and learn about building software. Work here consisted
+of two projects:
+
+- An algorithm (written in Python) that evaluated wholesale inventory data
+  against Amazon product data to predict profitable products that would sell
+  quickly. This program was used to direct product purchase decisions for an
+  Amazon storefront.
+- A SaaS application (written in Ruby on Rails) named Flat Rate Tracker. This
+  service helped automotive technicians track their earnings and verify they had
+  been paid correctly. This service was launched publicly and did get some
+  subscribers, but the MRR was insufficient to warrant the attention the project
+  required.
+
+---
+
+## Projects
+
+### [Styled Components Modifiers](https://www.npmjs.com/package/styled-components-modifiers)
+
+_BEM-flavored conventions in your Styled Components._
+
+[Styled Components](https://www.styled-components.com/) is a superb CSS-in-JS
+tool. [BEM](http://getbem.com/) is a wonderful CSS convention.
+`styled-components-modifiers` allows you to combine the best of both worlds.
+This is a library I developed to simplify our styling at Decisiv that was then
+open sourced. All of Decisiv's React JS based projects use this tool extensively
+and feedback has been very positive. When I last looked it had almost 200,000
+downloads on NPM.
+
+### [Key Design System](https://key-design-system.decisiv.com)
+
+_The design system for Decisiv, built with Styled Components._
+
+Decisiv has had a long running effort to modernize their applications. This
+project was a concerted effort to create a standard toolkit for building new
+applications and updating older applications. Key Design System has received
+company wide praise for enhancing consistency across our new projects,
+dramatically improving development time, and improving the accessibility
+standards in our applications.
+
+This project is managed according to requirements set by the Decisiv, but is
+freely available for use by anyone. I have served as the lead developer for this
+project.
+
+### [Request Answers](https://andrewtpoe.github.io/request-answers/)
+
+_A demo app for a unique approach to handling API requests with Redux._
+
+While at Decisiv, the UI team encountered significant issues with making,
+tracking, and handling responses from RESTful API requests. We attempted several
+patterns over different projects including our own initial best efforts, the
+"officially documented" approach, and `redux-saga`. All of these approaches
+resulted in inconsistent implementations, a high level of code complexity, and
+tons of boilerplate code.
+
+I developed an internal package called `redux-flight-control` that handled
+deduplication, managing requests through their lifecycles, and handling
+responses when the request was resolved (or errored). This package ended up
+saving well over 100 lines of repetitive boilerplate code for _every_ API
+request in our app which both reduced code bloat and improved development time
+for new features. Additionally, implementing good error handling and loading
+states was drastically simplified.
+
+The package I developed is internal, but the public git repository for the demo
+app linked above includes a generalized implementation and documents the core
+technique. The technique is very similar to the approach recently adopted by
+[redux-toolkit](https://redux-toolkit.js.org/) for async actions.
