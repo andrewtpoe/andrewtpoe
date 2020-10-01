@@ -1,5 +1,5 @@
 import tw, { styled } from 'twin.macro';
 
-export default styled.p`
-  ${tw`py-2`}
+export default styled.li`
+  ${tw`ml-4`}
 `;

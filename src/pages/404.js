@@ -1,13 +1,15 @@
 import React from 'react';
 
-import DefaultLayout from '../layouts/default';
+import Layout from '../components/layout';
+import H1 from '../components/h1';
+import P from '../components/p';
 
 function NotFoundPage() {
   return (
-    <DefaultLayout>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist.</p>
-    </DefaultLayout>
+    <Layout>
+      <H1>PAGE NOT FOUND</H1>
+      <P>You just hit a route that doesn&#39;t exist.</P>
+    </Layout>
   );
 }
 

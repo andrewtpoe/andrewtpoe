@@ -1,6 +1,6 @@
 import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
+import tw, { styled } from 'twin.macro';
 
 function A({ href, to, ...rest }) {
   if (href) {
@@ -10,4 +10,6 @@ function A({ href, to, ...rest }) {
   return <GatsbyLink to={to} {...rest} />;
 }
 
-export default styled(A)``;
+export default styled(A)`
+  ${tw`underline text-blue-600 visited:text-red-600 hover:text-red-800`}
+`;

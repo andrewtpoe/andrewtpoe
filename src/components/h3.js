@@ -1,3 +1,5 @@
-import styled from 'styled-components';
+import tw, { styled } from 'twin.macro';
 
-export default styled.h3``;
+export default styled.h3`
+  ${tw`font-medium text-2xl py-2`}
+`;

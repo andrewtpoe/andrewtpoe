@@ -1,8 +1,10 @@
-import styled from 'styled-components';
+import tw, { styled } from 'twin.macro';
 
 export default styled.hr`
-  background-color: ${({ theme }) => theme.colors.grey2};
-  border: none;
-  color: ${({ theme }) => theme.colors.grey2};
-  height: 1px;
+  ${tw`
+    bg-gray-400
+    border-none
+    h-px
+    my-6
+  `}
 `;
