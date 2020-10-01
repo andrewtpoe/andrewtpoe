@@ -29,7 +29,7 @@ function SEO({
             defaultDescription: description
             defaultImage: image
             defaultTitle
-            siteUrl: url
+            siteUrl
             titleTemplate
             twitterUsername
           }

@@ -6,7 +6,7 @@ module.exports = {
     defaultTitle: 'Andrew T. Poe',
     titleTemplate: '%s | Andrew T. Poe',
     twitterUsername: '@andrewtpoe',
-    url: `https://www.andrewtpoe.com`,
+    siteUrl: `https://www.andrewtpoe.com`,
   },
   plugins: [
     { resolve: `gatsby-plugin-styled-components`, options: { pure: true } },
