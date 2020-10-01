@@ -6,7 +6,9 @@ import A from './a';
 import H1 from './h1';
 import H2 from './h2';
 import H3 from './h3';
+import Li from './li';
 import P from './p';
+import Ul from './ul';
 
 function MDXProvider({ children, components, ...rest }) {
   return (
@@ -16,7 +18,9 @@ function MDXProvider({ children, components, ...rest }) {
         h1: H1,
         h2: H2,
         h3: H3,
+        li: Li,
         p: P,
+        ul: Ul,
         ...components,
       }}
       {...rest}
