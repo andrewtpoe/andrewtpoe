@@ -1,7 +1,7 @@
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
-import tw from 'twin.macro';
+import tw, { css } from 'twin.macro';
 
 import H2 from 'src/components/h2';
 import Layout from 'src/components/layout';
@@ -39,7 +39,7 @@ function PostSummary({ post }) {
   } = post;
 
   return (
-    <article css={tw`py-4`}>
+    <article css={tw`border-t border-gray-400 pt-8 pb-12`}>
       <header>
         <H2>{title}</H2>
         <div css={tw`text-xs text-gray-600 pb-2`}>
@@ -48,7 +48,10 @@ function PostSummary({ post }) {
         <MDXRenderer>{description}</MDXRenderer>
         <div css={tw`pt-5`}>
           <Link
-            css={tw`rounded p-3 text-white bg-teal-500 hover:bg-teal-600`}
+            css={css`
+              ${tw`block rounded p-3 text-white bg-teal-500 hover:bg-teal-600`}
+              width: fit-content;
+            `}
             to={`/blog${slug}`}
           >
             Read More
