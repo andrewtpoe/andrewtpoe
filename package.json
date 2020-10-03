@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react": "^7.21.3",
     "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^2.1.2"
   }
