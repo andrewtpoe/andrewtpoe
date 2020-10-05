@@ -52,7 +52,7 @@ function PostSummary({ post }) {
               ${tw`block rounded p-3 text-white bg-teal-500 hover:bg-teal-600`}
               width: fit-content;
             `}
-            to={`/blog${slug}`}
+            to={`/posts${slug}`}
           >
             Read More
           </Link>

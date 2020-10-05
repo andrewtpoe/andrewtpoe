@@ -20,7 +20,7 @@ function NavLink(props) {
 
 function SiteNav() {
   return (
-    <ul css={tw`flex space-x-4 list-none`}>
+    <ul css={tw`flex space-x-2 lg:space-x-4 list-none`}>
       <li>
         <NavLink to="/about">About</NavLink>
       </li>
@@ -33,15 +33,16 @@ function SiteNav() {
 
 function Header() {
   return (
-    <header css={tw`h-32 flex justify-between items-center`}>
-      <div css={tw`px-8`}>
+    <header css={tw`h-16 md:h-24 lg:h-32 flex justify-between items-center`}>
+      <div css={tw`px-2 md:px-4 lg:px-8`}>
         <Link
           css={tw`
             border-b-2
             border-red-800
             font-thin
             py-1
-            text-4xl
+            text-2xl
+            md:text-4xl
             tracking-wide
             hover:text-red-800
           `}
@@ -50,7 +51,7 @@ function Header() {
           andrew t. poe
         </Link>
       </div>
-      <div css={tw`px-8`}>
+      <div css={tw`px-2 md:px-4 lg:px-8`}>
         <SiteNav />
       </div>
     </header>

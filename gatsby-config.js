@@ -18,15 +18,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'blog',
-        path: `${__dirname}/content/blog`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: `${__dirname}/content/assets`,
+        name: 'posts',
+        path: `${__dirname}/posts`,
       },
     },
     {
@@ -62,7 +55,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#ffffff',
         display: 'minimal-ui',
-        icon: 'content/assets/poe-icon.svg', // This path is relative to the root of the site.
+        icon: 'static/images/poe-icon.svg', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sitemap',

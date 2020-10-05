@@ -21,7 +21,17 @@ function Layout({ children, getSEOProps = noop }) {
       <GlobalStyles />
       <SEO {...getSEOProps()} />
       <Header />
-      <main css={tw`max-w-screen-md mx-auto p-2 pb-32`}>
+      <main
+        css={tw`
+          max-w-screen-md
+          mx-auto
+          px-2
+          md:px-4
+          lg:px-8
+          pb-24
+          md:pb-32
+        `}
+      >
         <MDXProvider>{children}</MDXProvider>
       </main>
     </>
