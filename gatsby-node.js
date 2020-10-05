@@ -42,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : posts[index - 1].node;
 
       createPage({
-        path: `blog${post.node.fields.slug}`,
+        path: `posts${post.node.fields.slug}`,
         component: path.resolve(`./src/page-templates/blog-post.js`),
         context: {
           id: post.node.id,
@@ -68,7 +68,7 @@ exports.createPages = ({ graphql, actions }) => {
     });
     Array.from({ length: numPages }).forEach((_, index) => {
       createPage({
-        path: index === 0 ? `/blog` : `/blog/${index + 1}`,
+        path: index === 0 ? `/posts` : `/posts/${index + 1}`,
         component: path.resolve(`./src/page-templates/blog-post-list.js`),
         context: {
           currentPage: index + 1,
